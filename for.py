@@ -5,6 +5,7 @@ Created on Sat Aug 29 10:25:13 2015
 @author: hus
 """
 import random
+
 one = random.randint(1,11)
 two = random.randint(11,21)
 print one, two
