@@ -9,7 +9,7 @@ import re
 #import urllib
 import urllib2
 import meizi_series_getpage
-
+import meizi_series_nextpage
 def loadurl(url):
     try:
         conn = urllib2.urlopen(url,data=None,timeout=5)
@@ -35,7 +35,8 @@ def meizi(url,path):
     print 'open meiziwang over'
     #print len(taglists)
     for url in taglists:
-        meizi_series_getpage.tag_series(url,path)
+        meizi_series_nextpage.nextpage(url,path)
+        #meizi_series_getpage.tag_series(url,path)
         #print url
         
-meizi('http://www.meizitu.com','/home/hus/meizitu')
+#meizi('http://www.meizitu.com','/home/hus/meizitu')

@@ -35,7 +35,7 @@ def save_pic(url,path):
     name = re.findall(searchname,url)
     filename = path +'/'+ name[0]
     
-    print filename + ':start'
+    #print filename + ':start'
     
     while True:
         if os.path.exists(filename):
@@ -45,7 +45,7 @@ def save_pic(url,path):
         if download(url,filename):
             break
     
-    print filename + ':over'
+    print path + ':over'
     
 def pic_list(picList,path):
     picurl = ''
@@ -53,7 +53,6 @@ def pic_list(picList,path):
         save_pic(picurl,path)
 
 def picurl(url,path):
-    print path
     if not os.path.exists(path):
         os.makedirs(path)
     html = ''

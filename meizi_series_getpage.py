@@ -29,9 +29,9 @@ def oneOfSeries(urllist,path):
 
 
 def tag_series(url,path):
-    searchname = '.*/(.*?).html'
-    name = re.findall(searchname,url,re.S)
-    path = path + '/' + name[0]
+    #searchname = '.*/(.*?).html'
+    #name = re.findall(searchname,url,re.S)
+    #path = path + '/' + name[0]
     
     reSeriesList = '<div .*?class="pic".*?>.*?<a.*?href="(.*?)".*?target.*?>'
     html = ''
