@@ -49,4 +49,4 @@ def nextpage(url,path):
         print i
         meizi_series_getpage.tag_series(i,path)
     
-nextpage('http://www.meizitu.com/a/sifang.html','/home/hus/Desktop/meizitu')
+#nextpage('http://www.meizitu.com/a/sifang.html','/home/hus/Desktop/meizitu')

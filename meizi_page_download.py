@@ -45,7 +45,7 @@ def save_pic(url,path):
         if download(url,filename):
             break
     
-    print path + ':over'
+    print filename + ':over'
     
 def pic_list(picList,path):
     picurl = ''
@@ -65,10 +65,17 @@ def picurl(url,path):
             break
     #conn = urllib2.urlopen(url,data=None,timeout=2)
     #html = conn.read()
-    rePicContent = '<div.*?id="picture.*?>.*?<p>(.*?)</p>'
+    rePicContent1 = '<div.*?id="picture.*?>.*?<p>(.*?)</p>'
+    rePicContent2 = '<div.*?class="postContent.*?>.*?<p>(.*?)</p>'
     rePicList = '<img.*?src="(.*?)".*?>'
-    picContent = re.findall(rePicContent, html,re.S)
-    picList = re.findall(rePicList,picContent[0],re.S)
-    pic_list(picList,path)
-#url = 'http://www.meizitu.com/a/5195.html'
-#picurl(url,'/home/hus/Desktop/5195')
+    picContent = re.findall(rePicContent1, html,re.S)
+    if len(picContent) <=0:
+        picContent = re.findall(rePicContent2, html,re.S)
+    if len(picContent) <=0:
+        print 'load false, over download this page and return'
+        return False
+    else:
+        picList = re.findall(rePicList,picContent[0],re.S)
+        pic_list(picList,path)
+#url = 'http://www.meizitu.com/a/454.html'
+#picurl(url,'/home/hus/Desktop')

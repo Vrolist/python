@@ -8,7 +8,6 @@ Created on Sun Nov 29 17:23:07 2015
 import re
 #import urllib
 import urllib2
-import meizi_series_getpage
 import meizi_series_nextpage
 def loadurl(url):
     try:
@@ -39,4 +38,4 @@ def meizi(url,path):
         #meizi_series_getpage.tag_series(url,path)
         #print url
         
-#meizi('http://www.meizitu.com','/home/hus/meizitu')
+meizi('http://www.meizitu.com','/home/hus/Desktop/meizi')
