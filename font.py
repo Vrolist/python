@@ -33,7 +33,7 @@ def main():
         text2 = font2.render('number:'+str(time), True, white)
         screen.fill(screencolor)
         screen.blit(text1, (100,100))
-        screen.blit(text2, (100,160))
+        screen.blit(text2, (100,120))
         pygame.display.update()
         pygame.time.Clock().tick(60)
 t = threading.Thread(target=speedclock)

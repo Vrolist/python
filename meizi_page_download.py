@@ -78,4 +78,14 @@ def picurl(url,path):
         picList = re.findall(rePicList,picContent[0],re.S)
         pic_list(picList,path)
 #url = 'http://www.meizitu.com/a/454.html'
-#picurl(url,'/home/hus/Desktop')
+#picurl(url,'/home/hus/Desktop/shiyanlou/')
+
+str1 = 're123re0re456re'
+r1 = '(re.*re)'
+r2 = '(re.*?re)'
+print 'r1'
+for i in re.findall(r1,str1):
+    print i
+print 'r2'
+for i in re.findall(r2,str1):
+    print i
