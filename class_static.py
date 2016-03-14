@@ -11,10 +11,6 @@ class stat():
         
     def sayhello(self):
         print 'hello'
-        
-
-
-
 
 class Person(object):
     """Silly Person"""
@@ -34,4 +30,4 @@ if __name__ == '__main__':
     print type(piglei)
     print __name__
 else:
-    print __name__
+    print '__name__ : %s' %__name__
